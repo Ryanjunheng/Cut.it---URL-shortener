@@ -1,2 +1,55 @@
-<h1>Hello World</h1>
-<p>See Me in views/static/index.html.erb</p>
+
+<br>
+<div id="main-container">
+	<form action="/submit" method="POST" id="shorten">
+		<input id="input" type="url" name="user_input" placeholder="Cut a link short here" autofocus> 
+		<br>
+		<input id="button" type="submit" value="Cut It!"> 
+	</form>
+
+</div>
+
+
+	<div id="table-container">
+		<table id="table">
+			<tr>
+
+				<th id="long">Long URL</th>
+				<th id="short">Shortened URL</th>
+				<th id="click">Click Count</th>
+				
+			</tr>
+
+			<% Url.all.each do |u| %>
+			<tr>
+
+				<td>
+					 
+					<a href="<%= u.long_url %>" target="_blank"><%= u.long_url %></a>
+
+				</td>
+				<td>
+					<a href="<%= u.short_url %>" target="_blank">https://localhost:9393/<%= u.short_url %></a>
+				</td>
+
+				<td id="count">
+					<%= u.count %>
+				</td>
+
+			</tr>
+			<% end %>
+		</table>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

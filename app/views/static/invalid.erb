@@ -1,0 +1,55 @@
+<br>
+
+<div id="main-container">
+	<form action="/submit" method="POST">
+		<input id="input" type="text" name="user_input" placeholder="Cut a link short here"> 
+		<br>
+		<input id="button" type="submit" value="Cut It!"> 
+	</form>
+	<p id="invalidurl">Invalid! Please enter a legit url >.<</p>
+</div>
+
+<% if Url.all != [] %>
+	<div id="table-container">
+		<table>
+			<tr>
+
+				<th>ID</th>
+				<th>Long URL</th>
+				<th>Shortened URL</th>
+				<th>Click Count</th>
+				
+			</tr>
+
+			<% Url.all.each_with_index do |u, index| %>
+			<tr>
+
+				<td>
+					<%= index + 1 %>
+				</td>
+				<td>
+					 
+					<a href="<%= u.long_url %>"><%= u.long_url %></a>
+
+				</td>
+				<td>
+					<a href="<%= u.short_url %>">https://localhost:9393/<%= u.short_url %></a>
+				</td>
+
+				<td id="count">
+					<%= u.count %>
+				</td>
+
+			</tr>
+			<% end %>
+		</table>
+	</div>
+
+
+<% end %>
+
+
+
+
+
+

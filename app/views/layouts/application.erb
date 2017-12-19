@@ -1,8 +1,23 @@
 <html>
 	<head>
-		<title>Sinatra Framework</title>
+		<title>Cut.It&trade; - Link Cutting Made Easy</title>
+		<link rel="icon" href="/img/favicon.png">
+		<link href="/css/application.css" type="text/css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript" src="/js/application.js"></script>
 	</head>
 	<body>
+		<div id="top-bar-container">
+			<h1><a href="/">Cut.It</a></h1>
+		</div>
 		<%= yield %>
+		<div id="footer-container">
+			<h4><a href="/">Cut.It</a></h4>
+			<p id="tagline">Link cutting made easy</p>
+			<p id="copyright">&copy; 2017 Cut.It&trade; Handmade in NEXT</p>
+		</div>
 	</body>
 </html>

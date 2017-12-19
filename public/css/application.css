@@ -1,0 +1,314 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+#top-bar-container {
+	background-color: black;
+	width: 100%;
+	height: 90px;
+	margin: 0;
+	-webkit-box-shadow: 0 10px 6px -6px #999;
+    -moz-box-shadow: 0 10px 6px -6px #999;
+    box-shadow: 0 10px 6px -6px #999;
+	float: left;
+	z-index: 2;
+  	position: fixed;
+}
+
+#top-bar-container h1 a:-webkit-any-link {
+	color: white;
+	text-decoration: none;
+}
+
+#top-bar-container h1 a:link {
+	font-family: 'Lobster', Georgia, Times, serif;
+	font-size: 60px;
+	color: white;
+	text-align: center;
+	z-index: 3;
+  	position: fixed;
+	top: 5px;
+	text-decoration: none;
+	width: 100%;
+}
+
+#main-container {
+	clear: both;
+	float: left;
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+	left: 650px;
+	top: 200px;
+}
+
+#main-container #input {
+	width: 750px;
+	height: 63px;
+	border: 2px solid #ccc;
+	-webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+	border-radius: 3px;
+	position: relative;
+	right: 305px;
+	font-size: 23px;
+	text-indent: 22px;
+	font-family: 'Cabin', Helvetica, Arial, sans-serif;
+	-webkit-box-shadow: 0 4px 6px -6px #999;
+    -moz-box-shadow: 0 4px 6px -6px #999;
+    box-shadow: 0 4px 6px -6px #999;
+}
+
+#main-container #input:focus {
+    border: 2px solid #555;
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+}
+
+#main-container #input:hover {
+	-webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+}
+
+#main-container #input::placeholder {
+	font-size: 23px;
+	font-family: 'Cabin', Helvetica, Arial, sans-serif;
+	color: gainsboro;
+	position: relative;
+	left: 3px;
+	top: 0px;
+}
+
+#main-container #button {
+	border-radius: 4px;
+	width: 170px;
+	font-family: 'Cabin', Helvetica, Arial, sans-serif;
+	font-size: 30px;
+	color: grey;
+	position: relative;
+	right: 15px;
+	outline: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	top: 20px;
+	border: 2px solid #ccc;
+	-webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#main-container #button:hover {
+	background-color: black;
+    color: white;
+    border-color: black;
+}
+
+#main-container #button:active {
+	transform: translateY(3px);
+}
+
+#main-container #succeed {
+	position: relative;
+	top: 30px;
+	font-family: 'Cabin', Helvetica, Arial, sans-serif;
+	font-size: 30px;
+	right: 260px;
+}
+
+#main-container #myInput {
+	position: relative;
+	left: 10px;
+	top: -35px;
+	width: 320px;
+	height: 33px;
+	font-family: 'Cabin', Helvetica, Arial, sans-serif;
+	font-size: 24px;
+	text-indent: 3px;
+	border: 2px solid #ccc;
+	-webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+	border-radius: 3px;
+	-webkit-box-shadow: 0 4px 6px -6px #999;
+    -moz-box-shadow: 0 4px 6px -6px #999;
+    box-shadow: 0 4px 6px -6px #999;
+}
+
+#main-container #myInput:focus {
+	border: 2px solid #555;
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+}
+
+#main-container #myInput:hover {
+	-webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+}
+
+#main-container #copybutton {
+	position: relative;
+	left: 15px;
+	width: 80px;
+	border-radius: 4px;
+	outline: none;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	top: -40px;
+	height: 33px;
+	border: 2px solid #ccc;
+	-webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-family: 'Cabin', Helvetica, Arial, sans-serif;
+    color: grey;
+}
+
+#main-container #copybutton:hover {
+	background-color: black;
+    color: white;
+    border-color: black;
+}
+
+#main-container #copybutton:active {
+	transform: translateY(3px);
+}
+
+#table-container {
+	clear: both;
+	float: left;
+	position: absolute;
+	top: 480px;
+	margin-left: 10px;
+	margin-right: 10px;
+	/*left: 210px;
+*/	margin-bottom: 280px;
+}
+
+#table-container #table {
+	border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+
+#table-container #table th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    text-overflow: ellipsis;
+}
+
+#long {
+	width: 60%;
+}
+
+#short {
+	width: 30%;
+}
+
+#click {
+	width: 10%;
+}
+
+#table-container #table th {
+	font-family: 'Cabin', Helvetica, Arial, sans-serif;
+	font-size: 20px;
+}
+
+#table-container #table td a {
+	font-family: 'Cabin', Helvetica, Arial, sans-serif;
+	text-decoration: none;
+	color: grey;
+}
+
+#table-container #table td a:hover {
+	color: black;
+}
+
+#nosuchurl {
+	clear: both;
+	float: left;
+	position: absolute;
+	top: 150px;
+	left: 260px;
+	font-family: 'Raleway', Helvetica, Arial, sans-serif;
+	text-shadow: 1px 2px 2px #000000;
+	font-size: 40px;
+	letter-spacing: 3px;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+#main-container #invalidurl {
+	position: relative;
+	top: 45px;
+	font-family: 'Cabin', Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	color: red;
+	right: 65px;
+}
+
+#footer-container {
+	clear: both;
+	float: left;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 90px;
+	text-align: center;
+	background-color: black;
+	line-height: 40%;
+}
+
+#footer-container p {
+	font-family: 'Cabin', Helvetica, Arial, sans-serif;
+	color: white;
+}
+
+#footer-container h4 a:link {
+	font-family: 'Lobster', Georgia, Times, serif;
+	font-size: 32px;
+	position:relative;
+	top: 3px;
+
+}
+
+#footer-container h4 a:-webkit-any-link {
+	text-decoration: none;
+	color: white;
+}
+
+#footer-container #copyright {
+	font-size: 11px;
+	position: relative;
+	top: -10px;
+}
+
+#footer-container #tagline {
+	font-size: 18px;
+	position: relative;
+	top: -4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
