@@ -21,7 +21,7 @@ $(document).ready(function(){
 			success: function(response){
 				if (response.saved==true && response.repeat==false){
 				let changeTable = "<tr><td><a href=\"" + response.long_url + "\" target=\"_blank\">" + response.long_url + "</a></td><td><a href=\"" + response.short_url + "\" target=\"_blank\">https://linkcutit.herokuapp.com/" + response.short_url + "</a></td><td id=\"count\">0</td></tr>"
-				let addResult = "<p id=\"succeed\">Your shortened URL:</p><input type=\"text\" value=\"linkcutit.herokuapp.com/" + response.short_url + "\" id=\"myInput\"><button id=\"copybutton\">Copy</button>"
+				let addResult = "<div id=\"result-container\"><p id=\"succeed\">Your shortened URL:</p><input type=\"text\" value=\"linkcutit.herokuapp.com/" + response.short_url + "\" id=\"myInput\"><button id=\"copybutton\">Copy</button></div>"
 				let button = $('#button')
 				$('#table').append(changeTable)
 				$('#main-container').append(addResult)
@@ -41,7 +41,7 @@ $(document).ready(function(){
 				$formSubmit.val('Cut It!');
 			}
 			else if(response.saved==true && response.repeat==true){
-				let addResult = "<p id=\"succeed\">Your shortened URL:</p><input type=\"text\" value=\"linkcutit.herokuapp.com/" + response.short_url + "\" id=\"myInput\"><button id=\"copybutton\">Copy</button>"
+				let addResult = "<div id=\"result-container\"><p id=\"succeed\">Your shortened URL:</p><input type=\"text\" value=\"linkcutit.herokuapp.com/" + response.short_url + "\" id=\"myInput\"><button id=\"copybutton\">Copy</button></div>"
 				let button = $('#button')
 				$('#main-container').append(addResult)
 				$formSubmit.val('Cut It!');
