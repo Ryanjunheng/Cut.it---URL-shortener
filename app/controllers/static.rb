@@ -15,15 +15,16 @@ post '/submit' do
 
 	new_url = Url.find_by(long_url: params[:user_input]) 
 	if new_url.nil?
+		if (/(http|https):\/\/|[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,6}(:[0-9]{1,5})?(\/.*)?/ =~ params[:user_input]) != nil
 
 		if (/(https?\:\/\/)/ =~ params[:user_input]) == nil 
 
 			url = Url.new(long_url: "https://" + params[:user_input])
 
 			if url.save
-				 {short_url: url.short_url, long_url: url.long_url, saved: true}.to_json
+				 {short_url: url.short_url, long_url: url.long_url, saved: true, repeat: false}.to_json
 			else
-				@error = url.errors[:long_url][0]
+				# @error = url.errors[:long_url][0]
 				{saved: false}.to_json
 			end	
 
@@ -31,16 +32,18 @@ post '/submit' do
 			url = Url.new(long_url: params[:user_input])
 
 			if url.save
-				{short_url: url.short_url, long_url: url.long_url, saved: true}.to_json
+				{short_url: url.short_url, long_url: url.long_url, saved: true, repeat: false}.to_json
 			else
-				@error = url.errors[:long_url][0]
+				# @error = url.errors[:long_url][0]
 				{saved: false}.to_json
 			end	
 		end
-
-	# else
-	# 	@link = new_url.short_url
-	# 	{short_url: @link}.to_json
+		elsif (/(http|https):\/\/|[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,6}(:[0-9]{1,5})?(\/.*)?/ =~ params[:user_input]) == nil
+			{saved: false}.to_json
+		end
+	else
+		@link = new_url.short_url
+		{short_url: @link, saved: true, repeat: true}.to_json
 	end
 end
 end

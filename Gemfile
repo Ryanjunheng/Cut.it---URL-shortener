@@ -27,6 +27,8 @@ gem 'rspec'
 # Adding byebug for debugging
 gem 'byebug'
 
+gem 'valid_url'
+
 group :development, :test do
 	# Adding shotgun for local web hosting
 	gem 'shotgun'
@@ -38,3 +40,5 @@ group :production do
 	gem 'rails_12factor' # Heroku Gem Supports
 	gem 'puma' # Using puma for
 end
+
+
