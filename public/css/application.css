@@ -95,12 +95,12 @@ body {
 	font-size: 30px;
 	color: grey;
 	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
+	left: 39.2%;
+	/*transform: translateX(-50%);*/
 	outline: none;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	top: 20px;
+	top: 12px;
 	border: 2px solid #ccc;
 	-webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
@@ -114,7 +114,7 @@ body {
 }
 
 #main-container #button:active {
-	transform: translateY(3px);
+	transform: translateY(4px);
 }
 
 #result-container {
