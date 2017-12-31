@@ -41,7 +41,7 @@ post '/submit' do
 		elsif (/(http|https):\/\/|[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,6}(:[0-9]{1,5})?(\/.*)?/ =~ params[:user_input]) == nil
 			{saved: false}.to_json
 		end
-	else
+	elsif !new_url.nil?
 		@link = new_url.short_url
 		{short_url: @link, saved: true, repeat: true}.to_json
 	end

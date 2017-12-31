@@ -23,10 +23,10 @@ $(document).ready(function(){
 				let changeTable = "<tr><td><a href=\"" + response.long_url + "\" target=\"_blank\">" + response.long_url + "</a></td><td><a href=\"" + response.short_url + "\" target=\"_blank\">https://linkcutit.herokuapp.com/" + response.short_url + "</a></td><td id=\"count\">0</td></tr>"
 				let addResult = "<div id=\"result-container\"><p id=\"succeed\">Your shortened URL:</p><input type=\"text\" value=\"linkcutit.herokuapp.com/" + response.short_url + "\" id=\"myInput\"><button id=\"copybutton\">Copy</button></div>"
 				let button = $('#button')
+				$('#result-container').remove();
 				$('#table').append(changeTable)
 				$('#main-container').append(addResult)
 				$formSubmit.val('Cut It!');
-				$('#button').remove();
 				$("#copybutton").click(function(){
 					var copyText = document.getElementById("myInput");
 					copyText.select();
@@ -43,9 +43,9 @@ $(document).ready(function(){
 			else if(response.saved==true && response.repeat==true){
 				let addResult = "<div id=\"result-container\"><p id=\"succeed\">Your shortened URL:</p><input type=\"text\" value=\"linkcutit.herokuapp.com/" + response.short_url + "\" id=\"myInput\"><button id=\"copybutton\">Copy</button></div>"
 				let button = $('#button')
+				$('#result-container').remove();
 				$('#main-container').append(addResult)
 				$formSubmit.val('Cut It!');
-				$('#button').remove();
 				$("#copybutton").click(function(){
 					var copyText = document.getElementById("myInput");
 					copyText.select();
