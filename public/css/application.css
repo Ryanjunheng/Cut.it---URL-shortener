@@ -229,6 +229,15 @@ body {
 	width: 10%;
 }
 
+#table {
+	table-layout: fixed;
+}
+
+#table td {
+	word-wrap: break-word;
+	padding-right: 20px;
+}
+
 #table-container #table th {
 	font-family: 'Cabin', Helvetica, Arial, sans-serif;
 	font-size: 20px;
