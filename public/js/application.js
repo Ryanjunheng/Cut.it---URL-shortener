@@ -20,7 +20,7 @@ $(document).ready(function(){
 			dataType: "JSON",
 			success: function(response){
 				if (response.saved==true && response.repeat==false){
-				let changeTable = "<tr><td><a href=\"" + response.long_url + "\" target=\"_blank\">" + response.long_url + "</a></td><td><a href=\"" + response.short_url + "\" target=\"_blank\">cut.it/" + response.short_url + "</a></td><td id=\"count\">0</td></tr>"
+				let changeTable = "<tr><td><a href=\"" + response.long_url + "\" target=\"_blank\">" + response.long_url + "</a></td><td><a href=\"" + response.short_url + "\" target=\"_blank\">https://linkcutit.herokuapp.com/" + response.short_url + "</a></td><td id=\"count\">0</td></tr>"
 				let addResult = "<div id=\"result-container\"><p id=\"succeed\">Your shortened URL:</p><input type=\"text\" value=\"linkcutit.herokuapp.com/" + response.short_url + "\" id=\"myInput\"><button id=\"copybutton\">Copy</button></div>"
 				let button = $('#button')
 				$('#result-container').remove();
